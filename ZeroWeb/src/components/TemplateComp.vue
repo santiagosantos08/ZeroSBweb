@@ -17,7 +17,9 @@ export default {
   updated() {},
   beforeUnmount() {},
   unmounted() {},
-  data() {},
+  data() {
+    return {}
+  },
   watch: {},
   methods: {},
   computed: {},

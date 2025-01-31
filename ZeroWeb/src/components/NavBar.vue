@@ -1,7 +1,7 @@
 <template>
     <div class="navbarWrapper">
         <div class='wrapperBtns'>
-            <img src="/home/santiago/Documents/ZeroSBweb/ZeroWeb/src/assets/logo.webp" id="logoZNM" @click="redirect('Lander')">
+            <img src="../assets/logo.webp" id="logoZNM" @click="redirect('Lander')">
             <button v-for='(item,index) in pathNames' v-text='getBtnText(index)' @click='redirect(index)' class="navbtn ubuntu-mono-regular"></button>
         </div>
     </div>
@@ -29,6 +29,8 @@
     flex-direction: row;
     align-items: space-evenly;
     border-bottom: 3px dotted;
+    margin-bottom: -1.5px;
+    border-color: var(--maintext);
     transition: 0.15s all ease-in-out;
 }
 
@@ -49,6 +51,7 @@
 #logoZNM:hover {
     cursor: pointer;
     border-left: 15px solid;
+    border-color: var(--maintext);
     scale: 1.06;
 }
 
@@ -66,7 +69,8 @@ export default {
     this.isOnHome = (this.$route.name == "Lander")
   },
   beforeMount() {},
-  mounted() {},
+  mounted() {
+  },
   beforeUpdate() {},
   updated() {},
   beforeUnmount() {},
