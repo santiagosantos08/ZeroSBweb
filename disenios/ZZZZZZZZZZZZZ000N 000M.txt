@@ -1,0 +1,16 @@
+ZZZZZZZZZZZZZ000N             000M             MMMM
+ZZZZZZZZZZZZZ000NN            000MM           MMMMM
+            Z00NNNN           000MMM         MMMMMM
+           ZZ0NN NNN          000 MMM       MMM MMM
+          ZZZNNN  NNN         000  MMM     MMM  MMM
+         ZZZ NNN   NNN        000   MMM   MMM   MMM
+        ZZZ  NNN    NNN       000    MMM MMM    MMM
+       ZZZ   NNN     NNN      000     MMMMM     MMM
+      ZZZ    NNN      NNN     000      MMM      MMM
+     ZZZ     NNN       NNN    000               MMM
+    ZZZ      NNN        NNN   000               MMM
+   ZZZ       NNN         NNN  000               MMM
+  ZZZ        NNN          NNN 000               MMM
+ ZZZ         NNN           NNN000               MMM
+ZZZZZZZZZZZZZ000            NN000               MMM
+ZZZZZZZZZZZZZ000             N000               MMM

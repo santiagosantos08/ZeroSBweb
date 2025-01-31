@@ -1,0 +1,12 @@
+{
+    "pathNames": {
+        "ProdGallery": "/products",
+        "Downloads": "/downloads",
+        "News": "/news",
+        "About": "/about",
+        "Donations": "/donations",
+        "SoftSolutions": "/z daw",
+        "SourceSchematics": "/nerds",
+        "Contact": "/contact"
+    }
+}

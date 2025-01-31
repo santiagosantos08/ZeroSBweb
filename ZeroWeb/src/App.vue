@@ -1,85 +1,111 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import About from '@/components/About.vue'
+import Donations from '@/components/Donations.vue'
+import Downloads from '@/components/Downloads.vue'
+import Lander from '@/components/Lander.vue'
+import NavBar from '@/components/NavBar.vue'
+import News from '@/components/News.vue'
+import ProdGallery from '@/components/ProdGallery.vue'
+import SideBar from '@/components/SideBar.vue'
+import SoftSolutions from '@/components/SoftSolutions.vue'
+import SourceSchematics from '@/components/SourceSchematics.vue'
+import ProdBuilder from '@/components/ProdBuilder.vue'
+import NavStruct from '@/assets/navPaths.json'
+import router from '@/router';
+export default {
+  components: {
+    About,
+    Donations,
+    Downloads,
+    Lander,
+    NavBar,
+    News,
+    ProdGallery,
+    SideBar,
+    SoftSolutions,
+    SourceSchematics,
+    ProdBuilder
+  },
+  created() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    window.addEventListener('resize', this.handleResize)
+    this.smScreen = (window.outerWidth < 960)
+    this.mobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  data() {
+    return {
+      smScreen: false,
+      mobileUA: false,
+      paths: NavStruct
+    }
+  },
+  watch: {
+
+  },
+  methods: {
+    handleResize() {
+      this.smScreen = (window.outerWidth < 960)
+    },
+  },
+  computed: {
+
+  },
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class='wrapper'>
+    <NavBar :paths='this.paths' id="navbar"/>
+    <h1>small screenn:{{ smScreen }}</h1>
+    <h1>mobile UA: {{ mobileUA }}</h1>
+    <RouterView />
+  </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+.ubuntu-mono-regular {
+  font-family: "Ubuntu Mono", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.ubuntu-mono-bold {
+  font-family: "Ubuntu Mono", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.ubuntu-mono-regular-italic {
+  font-family: "Ubuntu Mono", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.ubuntu-mono-bold-italic {
+  font-family: "Ubuntu Mono", serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--mainbg);
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+:root {
+    --mainbg: #eee2dfff;
+    --hlit1: #4f759bff;
+    --maintext: #050517ff;
+    --hlit2: #74a57fff;
+    --warn: #dd1c1aff;
 }
 
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>

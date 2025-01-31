@@ -1,0 +1,27 @@
+secciones del navbar:
+
+Home -nombre-
+
+philosofy
+
+product gallery
+
+downloads
+    -firmware p/device
+    -config util
+
+donations
+
+product builder
+
+
+
+home: encoder con -> como cuando donde y porque
+
+como : explorá la galeria y armá con el builder
+
+cuando : cuando quieras
+
+donde :  oficialmente vendemos en argentina pero podes armar el tuyo o comprarnos una licencia si queres (???? a la mierda el foss ajsndahdkjas)
+
+porque: resumen del about & filosofia.
