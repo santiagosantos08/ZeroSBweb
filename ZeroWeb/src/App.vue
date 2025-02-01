@@ -70,7 +70,6 @@ export default {
       this.smScreen = (window.outerWidth < 960)
     },
     chTheme(darkMode) {
-      console.log(darkMode)
       if(darkMode === true) {
         this.mainbgcol = this.d_mainbgcol
         this.maintextcol = this.d_maintextcol
@@ -171,7 +170,7 @@ export default {
 }
 
 #tswap {
-  position: absolute;
+  position: fixed;
   top: 100px;
   right: 30px;
   z-index: 3;
